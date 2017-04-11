@@ -1,0 +1,1572 @@
+15mbp-12147:week10 nicholeh$ w205 root@ec2-34-207-205-145.compute-1.amazonaws.com
+The authenticity of host 'ec2-34-207-205-145.compute-1.amazonaws.com (34.207.205.145)' can't be established.
+RSA key fingerprint is SHA256:35xjINeYN9dLD1VSJFvj6G3fHiaEoiIp3uouzLUl+KQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-34-207-205-145.compute-1.amazonaws.com,34.207.205.145' (RSA) to the list of known hosts.
+Last login: Tue Mar 14 03:08:19 2017 from 73.181.149.209
+     ___   _        __   __   ____            __    
+    / _ \ (_)___ _ / /  / /_ / __/____ ___ _ / /___ 
+   / , _// // _ `// _ \/ __/_\ \ / __// _ `// // -_)
+  /_/|_|/_/ \_, //_//_/\__//___/ \__/ \_,_//_/ \__/ 
+           /___/                                                 
+                                              
+Welcome to a virtual machine image brought to you by RightScale!
+
+
+[root@ip-172-31-8-130 ~]# clear
+
+[root@ip-172-31-8-130 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      9.9G  6.2G  3.3G  66% /
+none            1.9G     0  1.9G   0% /dev/shm
+[root@ip-172-31-8-130 ~]# mount /dev/xvdf /data
+[root@ip-172-31-8-130 ~]# cd /data
+[root@ip-172-31-8-130 data]# ./start_postgres.sh 
+server starting
+[root@ip-172-31-8-130 data]# cd 
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse        v2.1.4.tar.gz
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4  wordcount
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   tweetcount
+[root@ip-172-31-8-130 ~]# cd extweetwordcount/
+[root@ip-172-31-8-130 extweetwordcount]# ls
+_build       fabfile.py               logs         psycopg-sample.py  _resources  tasks.py    Twittercredentials.py   virtualenvs
+config.json  hello-stream-twitter.py  project.clj  README.md          src         topologies  Twittercredentials.pyc  w205-spring-17-labs-exercises
+[root@ip-172-31-8-130 extweetwordcount]# vi psycopg-sample.py 
+[root@ip-172-31-8-130 extweetwordcount]# cd ..
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse        v2.1.4.tar.gz
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4  wordcount
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   tweetcount
+[root@ip-172-31-8-130 ~]# ipython
+Traceback (most recent call last):
+  File "/usr/bin/ipython", line 5, in <module>
+    from IPython import start_ipython
+ImportError: No module named IPython
+[root@ip-172-31-8-130 ~]# cd ipython/
+[root@ip-172-31-8-130 ipython]# ls
+build            COPYING.txt  examples   IPython      README.rst  setupbase.py   setupegg.py  setup.py  tox.ini
+CONTRIBUTING.md  docs         git-hooks  MANIFEST.in  scripts     setupbase.pyc  setupext     tools
+[root@ip-172-31-8-130 ipython]# cd IPython/
+[root@ip-172-31-8-130 IPython]# ls
+config         core        extensions  frontend.py  __init__.py  lib          nbconvert  parallel  scripts    terminal  utils
+consoleapp.py  display.py  external    html         kernel       __main__.py  nbformat   qt        sphinxext  testing   zmq
+[root@ip-172-31-8-130 IPython]# cd ..
+[root@ip-172-31-8-130 ipython]# cd ..
+[root@ip-172-31-8-130 ~]# jupyter notebook
+-bash: jupyter: command not found
+[root@ip-172-31-8-130 ~]#  ipython notebook --inline
+Traceback (most recent call last):
+  File "/usr/bin/ipython", line 5, in <module>
+    from IPython import start_ipython
+ImportError: No module named IPython
+[root@ip-172-31-8-130 ~]# ipython notebook --inline
+Traceback (most recent call last):
+  File "/usr/bin/ipython", line 5, in <module>
+    from IPython import start_ipython
+ImportError: No module named IPython
+[root@ip-172-31-8-130 ~]# ipython
+Traceback (most recent call last):
+  File "/usr/bin/ipython", line 5, in <module>
+    from IPython import start_ipython
+ImportError: No module named IPython
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse        v2.1.4.tar.gz
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4  wordcount
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   tweetcount
+[root@ip-172-31-8-130 ~]# cd ipython/
+[root@ip-172-31-8-130 ipython]# ls
+build            COPYING.txt  examples   IPython      README.rst  setupbase.py   setupegg.py  setup.py  tox.ini
+CONTRIBUTING.md  docs         git-hooks  MANIFEST.in  scripts     setupbase.pyc  setupext     tools
+[root@ip-172-31-8-130 ipython]# ipython notebook --inline
+Traceback (most recent call last):
+  File "/usr/bin/ipython", line 5, in <module>
+    from IPython import start_ipython
+ImportError: No module named IPython
+[root@ip-172-31-8-130 ipython]# cd IPython/
+[root@ip-172-31-8-130 IPython]# ls
+config         core        extensions  frontend.py  __init__.py  lib          nbconvert  parallel  scripts    terminal  utils
+consoleapp.py  display.py  external    html         kernel       __main__.py  nbformat   qt        sphinxext  testing   zmq
+[root@ip-172-31-8-130 IPython]# ipython notebook --inline
+Traceback (most recent call last):
+  File "/usr/bin/ipython", line 5, in <module>
+    from IPython import start_ipython
+ImportError: No module named IPython
+[root@ip-172-31-8-130 IPython]# cd terminal/
+[root@ip-172-31-8-130 terminal]# ls
+console  embed.py  __init__.py  interactiveshell.py  ipapp.py  tests
+[root@ip-172-31-8-130 terminal]# cd console/
+[root@ip-172-31-8-130 console]# ls
+app.py  completer.py  __init__.py  interactiveshell.py  tests
+[root@ip-172-31-8-130 console]# cd ..
+[root@ip-172-31-8-130 terminal]# python interactiveshell.py 
+Traceback (most recent call last):
+  File "interactiveshell.py", line 29, in <module>
+    from IPython.core.error import TryNext, UsageError
+ImportError: No module named IPython.core.error
+[root@ip-172-31-8-130 terminal]# ls
+console  embed.py  __init__.py  interactiveshell.py  ipapp.py  tests
+[root@ip-172-31-8-130 terminal]# cd ..
+[root@ip-172-31-8-130 IPython]# ls
+config         core        extensions  frontend.py  __init__.py  lib          nbconvert  parallel  scripts    terminal  utils
+consoleapp.py  display.py  external    html         kernel       __main__.py  nbformat   qt        sphinxext  testing   zmq
+[root@ip-172-31-8-130 IPython]# cd config
+[root@ip-172-31-8-130 config]# ls
+application.py  configurable.py  __init__.py  loader.py  profile  tests
+[root@ip-172-31-8-130 config]# cd 
+[root@ip-172-31-8-130 ~]# python
+Python 2.7.3 (default, Feb 12 2013, 14:01:46) 
+[GCC 4.4.6 20120305 (Red Hat 4.4.6-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import psycopg2
+>>> conn = psycopg2.connect(database="postgres", user="postgres", password="pass", host="localhost", port="5432")
+>>> try:
+...     cur = conn.cursor()
+...     cur.execute("CREATE DATABASE tcount")
+...     cur.close()
+...     conn.commit()
+...     conn.close()
+... except:
+...     print "Could not create tcount"
+... 
+Could not create tcount
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> cur = conn.cursor()
+>>> cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...        (word TEXT PRIMARY KEY     NOT NULL,
+...        count INT     NOT NULL);''')
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+psycopg2.ProgrammingError: syntax error at or near "NOT"
+LINE 1: CREATE TABLE IF NOT EXISTS tweetwordcount
+                        ^
+
+>>> conn.commit()
+>>> conn.close()
+>>> cur = conn.cursor()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.InterfaceError: connection already closed
+>>> cur.execute('''CREATE TABLE tweetwordcount
+...        (word TEXT PRIMARY KEY     NOT NULL,
+...        count INT     NOT NULL);''')
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+psycopg2.InterfaceError: cursor already closed
+>>> conn.commit()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.InterfaceError: connection already closed
+>>> conn.close()
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> cur = conn.cursor()
+>>> cur.execute('''CREATE TABLE tweetwordcount
+...        (word TEXT PRIMARY KEY     NOT NULL,
+...        count INT     NOT NULL);''')
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+psycopg2.ProgrammingError: relation "tweetwordcount" already exists
+
+>>> conn.commit()
+>>> conn.close()
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> #Create a Table
+... #The first step is to create a cursor.
+... 
+>>> cur = conn.cursor()
+>>> cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...        (word TEXT PRIMARY KEY     NOT NULL,
+...        count INT     NOT NULL);''')
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+psycopg2.ProgrammingError: syntax error at or near "NOT"
+LINE 1: CREATE TABLE IF NOT EXISTS tweetwordcount
+                        ^
+
+>>> conn.commit()
+>>> conn.close()
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> #Create a Table
+... #The first step is to create a cursor.
+... try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+... except: print('table already exists.')
+... conn.commit()
+  File "<stdin>", line 9
+    conn.commit()
+       ^
+SyntaxError: invalid syntax
+>>> conn.close()
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> #Create a Table
+... #The first step is to create a cursor.
+... try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+... except: 
+...   print('table already exists.')
+... conn.commit()
+  File "<stdin>", line 10
+    conn.commit()
+       ^
+SyntaxError: invalid syntax
+>>> conn.close()
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> #Create a Table
+... #The first step is to create a cursor.
+... try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+...   conn.commit()
+... except: 
+...   print('table already exists.')
+...   conn.close()
+... 
+table already exists.
+>>> cur = conn.cursor()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.InterfaceError: connection already closed
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> #Create a Table
+... #The first step is to create a cursor.
+... try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+...   conn.commit()
+...   conn.close()
+... except: 
+...   print('table already exists.')
+...   
+... 
+table already exists.
+>>> 
+>>> #Running sample SQL statements
+... #Inserting/Selecting/Updating
+... 
+>>> #Rather than executing a whole query at once, it is better to set up a cursor that encapsulates the query,
+... #and then read the query result a few rows at a time. One reason for doing this is
+... #to avoid memory overrun when the result contains a large number of rows.
+... 
+>>> cur = conn.cursor()
+>>> cur.execute("INSERT INTO tweetwordcount (word,count) \
+...       VALUES ('better_test', 1)");
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+psycopg2.InternalError: current transaction is aborted, commands ignored until end of transaction block
+
+>>> conn
+<connection object at 0x25c2730; dsn: 'dbname=tcount host=localhost user=postgres password=xxxx port=5432', closed: 0>
+>>> cur = conn.cursor()
+>>> 
+>>> 
+>>> #Insert
+... cur.execute("INSERT INTO tweetwordcount (word,count) VALUES ('better_test', 1)");
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+psycopg2.InternalError: current transaction is aborted, commands ignored until end of transaction block
+
+>>> conn.commit()
+>>> quit()
+[root@ip-172-31-8-130 ~]# import psycopg2
+-bash: import: command not found
+[root@ip-172-31-8-130 ~]# 
+[root@ip-172-31-8-130 ~]# conn = psycopg2.connect(database="postgres", user="postgres", password="pass", host="localhost", port="5432")
+-bash: syntax error near unexpected token `('
+[root@ip-172-31-8-130 ~]# 
+[root@ip-172-31-8-130 ~]# #Create the Database
+[root@ip-172-31-8-130 ~]# 
+[root@ip-172-31-8-130 ~]# try:
+-bash: try:: command not found
+[root@ip-172-31-8-130 ~]#     cur = conn.cursor()
+-bash: syntax error near unexpected token `('
+[root@ip-172-31-8-130 ~]#     cur.execute("CREATE DATABASE tcount")
+-bash: syntax error near unexpected token `"CREATE DATABASE tcount"'
+[root@ip-172-31-8-130 ~]#     cur.close()
+>     conn.commit()
+-bash: syntax error near unexpected token `conn.commit'
+[root@ip-172-31-8-130 ~]#     conn.close()
+> except:
+-bash: syntax error near unexpected token `except:'
+[root@ip-172-31-8-130 ~]#     print("Could not create tcount")
+-bash: syntax error near unexpected token `"Could not create tcount"'
+[root@ip-172-31-8-130 ~]# python
+Python 2.7.3 (default, Feb 12 2013, 14:01:46) 
+[GCC 4.4.6 20120305 (Red Hat 4.4.6-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import psycopg2
+>>> 
+>>> conn = psycopg2.connect(database="postgres", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> #Create the Database
+... 
+>>> try:
+...     cur = conn.cursor()
+...     cur.execute("CREATE DATABASE tcount")
+...     cur.close()
+...     conn.commit()
+...     conn.close()
+... except:
+...     print("Could not create tcount")
+... 
+Could not create tcount
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE IF NOT EXISTS tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+...   conn.commit()
+...   conn.close()
+... except: 
+...   print('table already exists.')
+... 
+table already exists.
+>>> cur = conn.cursor()
+>>> cur.execute("INSERT INTO tweetwordcount (word,count) VALUES ('better_test', 1)");
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.InternalError: current transaction is aborted, commands ignored until end of transaction block
+
+>>> conn.commit()
+>>> quit()
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse        v2.1.4.tar.gz
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4  wordcount
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   tweetcount
+[root@ip-172-31-8-130 ~]# cd extweetwordcount/
+[root@ip-172-31-8-130 extweetwordcount]# ls
+_build       fabfile.py               logs         psycopg-sample.py  _resources  tasks.py    Twittercredentials.py   virtualenvs
+config.json  hello-stream-twitter.py  project.clj  README.md          src         topologies  Twittercredentials.pyc  w205-spring-17-labs-exercises
+[root@ip-172-31-8-130 extweetwordcount]# cd 
+[root@ip-172-31-8-130 ~]# cd /dtat
+-bash: cd: /dtat: No such file or directory
+[root@ip-172-31-8-130 ~]# cd /data
+[root@ip-172-31-8-130 data]# psql -U postgres
+psql (8.4.20)
+Type "help" for help.
+
+postgres=# \d
+No relations found.
+postgres=# /d
+postgres-# \list
+                                  List of databases
+   Name    |  Owner   | Encoding |  Collation  |    Ctype    |   Access privileges   
+-----------+----------+----------+-------------+-------------+-----------------------
+ dvdrental | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ metastore | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ tcount    | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+                                                             : postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+                                                             : postgres=CTc/postgres
+(6 rows)
+
+postgres-# \connect tcount 
+psql (8.4.20)
+You are now connected to database "tcount".
+tcount-# \list
+                                  List of databases
+   Name    |  Owner   | Encoding |  Collation  |    Ctype    |   Access privileges   
+-----------+----------+----------+-------------+-------------+-----------------------
+ dvdrental | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ metastore | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ tcount    | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+                                                             : postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres
+                                                             : postgres=CTc/postgres
+(6 rows)
+
+tcount-# \dt
+             List of relations
+ Schema |      Name      | Type  |  Owner   
+--------+----------------+-------+----------
+ public | tweetwordcount | table | postgres
+(1 row)
+
+tcount-# select * from tweetwordcount;
+ERROR:  syntax error at or near "/"
+LINE 1: /d
+        ^
+tcount=# SELECT * FROM tweetwordcount;
+ word | count 
+------+-------
+(0 rows)
+
+tcount=# logout
+tcount-# logout
+tcount-# quit;
+ERROR:  syntax error at or near "logout"
+LINE 1: logout
+        ^
+tcount=# quit'
+tcount'# ;
+tcount'# quit;
+tcount'# ^C
+tcount=# ^C
+tcount=# ^C
+tcount=# \q
+[root@ip-172-31-8-130 data]# cd ..
+[root@ip-172-31-8-130 /]# python
+Python 2.7.3 (default, Feb 12 2013, 14:01:46) 
+[GCC 4.4.6 20120305 (Red Hat 4.4.6-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> mport psycopg2
+  File "<stdin>", line 1
+    mport psycopg2
+                 ^
+SyntaxError: invalid syntax
+>>> 
+>>> conn = psycopg2.connect(database="postgres", user="postgres", password="pass", host="localhost", port="5432")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'psycopg2' is not defined
+>>> 
+>>> #Create the Database
+... 
+>>> try:
+...     cur = conn.cursor()
+...     cur.execute("CREATE DATABASE tcount")
+...     cur.close()
+...     conn.commit()
+...     conn.close()
+... except:
+...     print("Could not create tcount")
+... 
+Could not create tcount
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'psycopg2' is not defined
+>>> 
+>>> #Create a Table
+... #The first step is to create a cursor.
+... try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+...   conn.commit()
+...   conn.close()
+... except: 
+...   print('table already exists.')
+... 
+table already exists.
+>>> 
+>>> cur = conn.cursor()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'conn' is not defined
+>>> 
+>>> 
+>>> #Insert
+... cur.execute("INSERT INTO tweetwordcount (word,count) VALUES ('better_test', 1);")
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'cur' is not defined
+>>> conn.commit()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'conn' is not defined
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'psycopg2' is not defined
+>>> 
+>>> import psycopg2
+>>> conn = psycopg2.connect(database="postgres", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> try:
+...     cur = conn.cursor()
+...     cur.execute("CREATE DATABASE tcount")
+...     cur.close()
+...     conn.commit()
+...     conn.close()
+... except:
+...     print("Could not create tcount")
+... 
+Could not create tcount
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> 
+>>> try:
+...   cur = conn.cursor()
+...   cur.execute('''CREATE TABLE tweetwordcount
+...          (word TEXT PRIMARY KEY     NOT NULL,
+...          count INT     NOT NULL);''')
+...   conn.commit()
+...   conn.close()
+... except: 
+...   print('table already exists.')
+... 
+table already exists.
+>>> cur = conn.cursor()
+>>> cur.execute("INSERT INTO tweetwordcount (word,count) VALUES ('better_test', 1);")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.InternalError: current transaction is aborted, commands ignored until end of transaction block
+
+>>> conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
+>>> cur = conn.cursor()
+>>> cur.execute("INSERT INTO tweetwordcount (word,count) \VALUES ('better_test', 1);")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.ProgrammingError: syntax error at or near "\"
+LINE 1: INSERT INTO tweetwordcount (word,count) \VALUES ('better_tes...
+                                                ^
+
+>>> cur.execute("INSERT INTO tweetwordcount (word,count) VALUES ('better_test', 1);")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+psycopg2.InternalError: current transaction is aborted, commands ignored until end of transaction block
+
+>>> quit()
+[root@ip-172-31-8-130 /]# ls
+bin  boot  data  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  sbin  selinux  srv  sys  tmp  usr  var  wordcount.clj
+[root@ip-172-31-8-130 /]# cd 
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse        v2.1.4.tar.gz
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4  wordcount
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   tweetcount
+[root@ip-172-31-8-130 ~]# cd extweetwordcount/
+[root@ip-172-31-8-130 extweetwordcount]# ls
+_build       fabfile.py               logs         psycopg-sample.py  _resources  tasks.py    Twittercredentials.py   virtualenvs
+config.json  hello-stream-twitter.py  project.clj  README.md          src         topologies  Twittercredentials.pyc  w205-spring-17-labs-exercises
+[root@ip-172-31-8-130 extweetwordcount]# vi psycopg-sample.py 
+[root@ip-172-31-8-130 extweetwordcount]# logout
+
+Connection to ec2-34-207-205-145.compute-1.amazonaws.com closed.
+15mbp-12147:week10 nicholeh$ bothproxy 
+Last login: Tue Mar 14 14:49:52 2017 from 10.205.20.160
+[nicholeh@seapr1hdp200 ~]$ packet_write_wait: Connection to 10.205.20.160: Broken pipe
+15mbp-12147:week10 nicholeh$ w205 root@ec2-54-157-234-145.compute-1.amazonaws.com
+The authenticity of host 'ec2-54-157-234-145.compute-1.amazonaws.com (54.157.234.145)' can't be established.
+RSA key fingerprint is SHA256:35xjINeYN9dLD1VSJFvj6G3fHiaEoiIp3uouzLUl+KQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-54-157-234-145.compute-1.amazonaws.com,54.157.234.145' (RSA) to the list of known hosts.
+Last login: Wed Mar 15 15:19:15 2017 from 73.181.149.209
+     ___   _        __   __   ____            __    
+    / _ \ (_)___ _ / /  / /_ / __/____ ___ _ / /___ 
+   / , _// // _ `// _ \/ __/_\ \ / __// _ `// // -_)
+  /_/|_|/_/ \_, //_//_/\__//___/ \__/ \_,_//_/ \__/ 
+           /___/                                                 
+                                              
+Welcome to a virtual machine image brought to you by RightScale!
+
+
+[root@ip-172-31-8-130 ~]# mount /dev/xvdf /data
+[root@ip-172-31-8-130 ~]# cd /data
+[root@ip-172-31-8-130 data]# ls
+hadoop       hadoop-yarn  pagila-0.10.1  pgsql                        setup_zeppelin.sh  start_metastore.sh  stop_metastore.sh  w205_exercise_1
+hadoop-hdfs  lost+found   pagila.zip     setup_hive_for_postgres.sql  spark15            start_postgres.sh   stop_postgres.sh   w205-spring-17-labs-exercises
+[root@ip-172-31-8-130 data]# ./start_postgres.sh 
+server starting
+[root@ip-172-31-8-130 data]# cd 
+[root@ip-172-31-8-130 ~]# cd extweetwordcount/
+[root@ip-172-31-8-130 extweetwordcount]# ls
+_build       fabfile.py               logs         psycopg-sample.py  _resources  tasks.py    Twittercredentials.py   virtualenvs
+config.json  hello-stream-twitter.py  project.clj  README.md          src         topologies  Twittercredentials.pyc  w205-spring-17-labs-exercises
+[root@ip-172-31-8-130 extweetwordcount]# python hello-stream-twitter.py 
+Traceback (most recent call last):
+  File "hello-stream-twitter.py", line 5, in <module>
+    from tweepy.streaming import StreamListener
+ImportError: No module named tweepy.streaming
+[root@ip-172-31-8-130 extweetwordcount]# import tweepy
+-bash: import: command not found
+[root@ip-172-31-8-130 extweetwordcount]# pip install tweepy
+Traceback (most recent call last):
+  File "/usr/bin/pip", line 5, in <module>
+    from pkg_resources import load_entry_point
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3070, in <module>
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3056, in _call_aside
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3083, in _initialize_master_working_set
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 647, in _build_master
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 660, in _build_from_requirements
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 833, in resolve
+pkg_resources.DistributionNotFound: The 'pip==8.1.2' distribution was not found and is required by the application
+[root@ip-172-31-8-130 extweetwordcount]# python hello-stream-twitter.py 
+Traceback (most recent call last):
+  File "hello-stream-twitter.py", line 5, in <module>
+    from tweepy.streaming import StreamListener
+ImportError: No module named tweepy.streaming
+[root@ip-172-31-8-130 extweetwordcount]# pip install tweepy
+Traceback (most recent call last):
+  File "/usr/bin/pip", line 5, in <module>
+    from pkg_resources import load_entry_point
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3070, in <module>
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3056, in _call_aside
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3083, in _initialize_master_working_set
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 647, in _build_master
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 660, in _build_from_requirements
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 833, in resolve
+pkg_resources.DistributionNotFound: The 'pip==8.1.2' distribution was not found and is required by the application
+[root@ip-172-31-8-130 extweetwordcount]# git clone https://github.com/tweepy/tweepy.git
+Initialized empty Git repository in /root/extweetwordcount/tweepy/.git/
+remote: Counting objects: 4429, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 4429 (delta 0), reused 0 (delta 0), pack-reused 4423
+Receiving objects: 100% (4429/4429), 2.05 MiB, done.
+Resolving deltas: 100% (2849/2849), done.
+[root@ip-172-31-8-130 extweetwordcount]# cd tweepy
+[root@ip-172-31-8-130 tweepy]# python setup.py install
+running install
+running bdist_egg
+running egg_info
+creating tweepy.egg-info
+writing requirements to tweepy.egg-info/requires.txt
+writing tweepy.egg-info/PKG-INFO
+writing top-level names to tweepy.egg-info/top_level.txt
+writing dependency_links to tweepy.egg-info/dependency_links.txt
+writing manifest file 'tweepy.egg-info/SOURCES.txt'
+reading manifest file 'tweepy.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'tweepy.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib
+creating build/lib/tweepy
+copying tweepy/models.py -> build/lib/tweepy
+copying tweepy/utils.py -> build/lib/tweepy
+copying tweepy/api.py -> build/lib/tweepy
+copying tweepy/cursor.py -> build/lib/tweepy
+copying tweepy/binder.py -> build/lib/tweepy
+copying tweepy/error.py -> build/lib/tweepy
+copying tweepy/cache.py -> build/lib/tweepy
+copying tweepy/parsers.py -> build/lib/tweepy
+copying tweepy/auth.py -> build/lib/tweepy
+copying tweepy/__init__.py -> build/lib/tweepy
+copying tweepy/streaming.py -> build/lib/tweepy
+creating build/lib/examples
+copying examples/oauth.py -> build/lib/examples
+copying examples/__init__.py -> build/lib/examples
+copying examples/streaming.py -> build/lib/examples
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/models.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/utils.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/api.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/cursor.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/binder.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/error.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/cache.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/parsers.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/auth.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/__init__.py -> build/bdist.linux-x86_64/egg/tweepy
+copying build/lib/tweepy/streaming.py -> build/bdist.linux-x86_64/egg/tweepy
+creating build/bdist.linux-x86_64/egg/examples
+copying build/lib/examples/oauth.py -> build/bdist.linux-x86_64/egg/examples
+copying build/lib/examples/__init__.py -> build/bdist.linux-x86_64/egg/examples
+copying build/lib/examples/streaming.py -> build/bdist.linux-x86_64/egg/examples
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/models.py to models.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/utils.py to utils.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/api.py to api.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/cursor.py to cursor.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/binder.py to binder.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/error.py to error.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/cache.py to cache.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/parsers.py to parsers.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/auth.py to auth.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/tweepy/streaming.py to streaming.pyc
+byte-compiling build/bdist.linux-x86_64/egg/examples/oauth.py to oauth.pyc
+byte-compiling build/bdist.linux-x86_64/egg/examples/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/examples/streaming.py to streaming.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying tweepy.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying tweepy.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying tweepy.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying tweepy.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying tweepy.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying tweepy.egg-info/zip-safe -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating dist
+creating 'dist/tweepy-3.6.0-py2.6.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing tweepy-3.6.0-py2.6.egg
+Copying tweepy-3.6.0-py2.6.egg to /usr/lib/python2.6/site-packages
+Adding tweepy 3.6.0 to easy-install.pth file
+
+Installed /usr/lib/python2.6/site-packages/tweepy-3.6.0-py2.6.egg
+Processing dependencies for tweepy==3.6.0
+Searching for PySocks>=1.5.7
+Reading https://pypi.python.org/simple/PySocks/
+Best match: PySocks 1.6.6
+Downloading https://pypi.python.org/packages/fd/70/ba9982cedc9b3ed3c06934f1f46a609e0f23c7bfdf567c52a09f1296b8cb/PySocks-1.6.6.tar.gz#md5=571f4c23982fa86bf0e7a441f1b6c881
+Processing PySocks-1.6.6.tar.gz
+Writing /tmp/easy_install-e67H0D/PySocks-1.6.6/setup.cfg
+Running PySocks-1.6.6/setup.py -q bdist_egg --dist-dir /tmp/easy_install-e67H0D/PySocks-1.6.6/egg-dist-tmp-mLb8X_
+zip_safe flag not set; analyzing archive contents...
+Moving PySocks-1.6.6-py2.6.egg to /usr/lib/python2.6/site-packages
+Adding PySocks 1.6.6 to easy-install.pth file
+
+Installed /usr/lib/python2.6/site-packages/PySocks-1.6.6-py2.6.egg
+Searching for six>=1.10.0
+Reading https://pypi.python.org/simple/six/
+Best match: six 1.10.0
+Downloading https://pypi.python.org/packages/b3/b2/238e2590826bfdd113244a40d9d3eb26918bd798fc187e2360a8367068db/six-1.10.0.tar.gz#md5=34eed507548117b2ab523ab14b2f8b55
+Processing six-1.10.0.tar.gz
+Writing /tmp/easy_install-lwR7dw/six-1.10.0/setup.cfg
+Running six-1.10.0/setup.py -q bdist_egg --dist-dir /tmp/easy_install-lwR7dw/six-1.10.0/egg-dist-tmp-JYTYir
+no previously-included directories found matching 'documentation/_build'
+zip_safe flag not set; analyzing archive contents...
+six: module references __path__
+creating /usr/lib/python2.6/site-packages/six-1.10.0-py2.6.egg
+Extracting six-1.10.0-py2.6.egg to /usr/lib/python2.6/site-packages
+Adding six 1.10.0 to easy-install.pth file
+
+Installed /usr/lib/python2.6/site-packages/six-1.10.0-py2.6.egg
+Searching for requests-oauthlib>=0.7.0
+Reading https://pypi.python.org/simple/requests-oauthlib/
+Best match: requests-oauthlib 0.8.0
+Downloading https://pypi.python.org/packages/80/14/ad120c720f86c547ba8988010d5186102030591f71f7099f23921ca47fe5/requests-oauthlib-0.8.0.tar.gz#md5=4358a879a4377393bcfd37d0f9ae6d4d
+Processing requests-oauthlib-0.8.0.tar.gz
+Writing /tmp/easy_install-Pk6asa/requests-oauthlib-0.8.0/setup.cfg
+Running requests-oauthlib-0.8.0/setup.py -q bdist_egg --dist-dir /tmp/easy_install-Pk6asa/requests-oauthlib-0.8.0/egg-dist-tmp-szsDVj
+no previously-included directories found matching '*.pyc'
+creating /usr/lib/python2.6/site-packages/requests_oauthlib-0.8.0-py2.6.egg
+Extracting requests_oauthlib-0.8.0-py2.6.egg to /usr/lib/python2.6/site-packages
+Adding requests-oauthlib 0.8.0 to easy-install.pth file
+
+Installed /usr/lib/python2.6/site-packages/requests_oauthlib-0.8.0-py2.6.egg
+Searching for requests>=2.11.1
+Reading https://pypi.python.org/simple/requests/
+Best match: requests 2.13.0
+Downloading https://pypi.python.org/packages/16/09/37b69de7c924d318e51ece1c4ceb679bf93be9d05973bb30c35babd596e2/requests-2.13.0.tar.gz#md5=921ec6b48f2ddafc8bb6160957baf444
+Processing requests-2.13.0.tar.gz
+Writing /tmp/easy_install-i7F0fR/requests-2.13.0/setup.cfg
+Running requests-2.13.0/setup.py -q bdist_egg --dist-dir /tmp/easy_install-i7F0fR/requests-2.13.0/egg-dist-tmp-tyTRPa
+warning: no files found matching 'test_requests.py'
+warning: no files found matching 'requirements.txt'
+creating /usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg
+Extracting requests-2.13.0-py2.6.egg to /usr/lib/python2.6/site-packages
+Removing requests 2.7.0 from easy-install.pth file
+Adding requests 2.13.0 to easy-install.pth file
+
+Installed /usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg
+Searching for oauthlib>=0.6.2
+Reading https://pypi.python.org/simple/oauthlib/
+Best match: oauthlib 2.0.1
+Downloading https://pypi.python.org/packages/d2/4c/5ac894a469e25ebd02f6b3c2adb9f55253e6d1ca1f16a7d247ae6d48b4c8/oauthlib-2.0.1.tar.gz#md5=d64091c3b5cc2198c5031d95e70eaa9d
+Processing oauthlib-2.0.1.tar.gz
+Writing /tmp/easy_install-hPDxxA/oauthlib-2.0.1/setup.cfg
+Running oauthlib-2.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-hPDxxA/oauthlib-2.0.1/egg-dist-tmp-mLsa0f
+zip_safe flag not set; analyzing archive contents...
+Moving oauthlib-2.0.1-py2.6.egg to /usr/lib/python2.6/site-packages
+Adding oauthlib 2.0.1 to easy-install.pth file
+
+Installed /usr/lib/python2.6/site-packages/oauthlib-2.0.1-py2.6.egg
+Finished processing dependencies for tweepy==3.6.0
+[root@ip-172-31-8-130 tweepy]# cd ..
+[root@ip-172-31-8-130 extweetwordcount]# python hello-stream-twitter.py 
+Traceback (most recent call last):
+  File "hello-stream-twitter.py", line 10, in <module>
+    import simplejson
+ImportError: No module named simplejson
+[root@ip-172-31-8-130 extweetwordcount]# ptyon
+-bash: ptyon: command not found
+[root@ip-172-31-8-130 extweetwordcount]# python
+Python 2.6.6 (r266:84292, Jan 22 2014, 09:42:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import joson
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named joson
+>>> import json
+>>> quit()
+[root@ip-172-31-8-130 extweetwordcount]# vi hello-stream-twitter.py 
+[root@ip-172-31-8-130 extweetwordcount]# python hello-stream-twitter.py 
+Gathering data at Thu Mar 16 15:43:19 2017
+Start Time = Thu Mar 16 15:43:19 2017
+/usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg/requests/packages/urllib3/util/ssl_.py:334: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+/usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg/requests/packages/urllib3/util/ssl_.py:132: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+Count==  0
+End Time = Thu Mar 16 15:44:19 2017
+Elapsed Time = 60.0344359875
+[root@ip-172-31-8-130 extweetwordcount]# vi hello-stream-twitter.py 
+[root@ip-172-31-8-130 extweetwordcount]# python hello-stream-twitter.py 
+Gathering data at Thu Mar 16 15:45:49 2017
+Start Time = Thu Mar 16 15:45:49 2017
+/usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg/requests/packages/urllib3/util/ssl_.py:334: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+/usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg/requests/packages/urllib3/util/ssl_.py:132: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+Count==  0
+End Time = Thu Mar 16 15:46:49 2017
+Elapsed Time = 60.0196061134
+[root@ip-172-31-8-130 extweetwordcount]# python
+Python 2.6.6 (r266:84292, Jan 22 2014, 09:42:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import simplejson
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named simplejson
+>>> quit()
+[root@ip-172-31-8-130 extweetwordcount]# git clone https://github.com/simplejson/simplejson
+Initialized empty Git repository in /root/extweetwordcount/simplejson/.git/
+remote: Counting objects: 2777, done.
+remote: Total 2777 (delta 0), reused 0 (delta 0), pack-reused 2777
+Receiving objects: 100% (2777/2777), 1.06 MiB, done.
+Resolving deltas: 100% (1772/1772), done.
+[root@ip-172-31-8-130 extweetwordcount]# cd simplejson/
+[root@ip-172-31-8-130 simplejson]# python setup.py install
+running install
+running bdist_egg
+running egg_info
+creating simplejson.egg-info
+writing simplejson.egg-info/PKG-INFO
+writing top-level names to simplejson.egg-info/top_level.txt
+writing dependency_links to simplejson.egg-info/dependency_links.txt
+writing manifest file 'simplejson.egg-info/SOURCES.txt'
+reading manifest file 'simplejson.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'simplejson.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.6
+creating build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/scanner.py -> build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/compat.py -> build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/decoder.py -> build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/tool.py -> build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/encoder.py -> build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/ordered_dict.py -> build/lib.linux-x86_64-2.6/simplejson
+copying simplejson/__init__.py -> build/lib.linux-x86_64-2.6/simplejson
+creating build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_str_subclass.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_check_circular.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_float.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_namedtuple.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_indent.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_tool.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_scanstring.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_bitsize_int_as_string.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_bigint_as_string.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_encode_basestring_ascii.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_iterable.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_errors.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_separators.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_dump.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_encode_for_html.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_pass3.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_speedups.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_decimal.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_pass1.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_tuple.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_raw_json.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_recursion.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_unicode.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_decode.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_for_json.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_default.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_pass2.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/__init__.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_subclass.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_fail.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+copying simplejson/tests/test_item_sort_key.py -> build/lib.linux-x86_64-2.6/simplejson/tests
+running build_ext
+building 'simplejson._speedups' extension
+creating build/temp.linux-x86_64-2.6
+creating build/temp.linux-x86_64-2.6/simplejson
+gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python2.6 -c simplejson/_speedups.c -o build/temp.linux-x86_64-2.6/simplejson/_speedups.o
+gcc -pthread -shared build/temp.linux-x86_64-2.6/simplejson/_speedups.o -L/usr/lib64 -lpython2.6 -o build/lib.linux-x86_64-2.6/simplejson/_speedups.so
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/scanner.py -> build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/compat.py -> build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/decoder.py -> build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/tool.py -> build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/_speedups.so -> build/bdist.linux-x86_64/egg/simplejson
+creating build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_str_subclass.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_check_circular.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_float.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_namedtuple.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_indent.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_tool.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_scanstring.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_bitsize_int_as_string.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_bigint_as_string.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_encode_basestring_ascii.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_iterable.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_errors.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_separators.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_dump.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_encode_for_html.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_pass3.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_speedups.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_decimal.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_pass1.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_tuple.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_raw_json.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_recursion.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_unicode.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_decode.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_for_json.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_default.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_pass2.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/__init__.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_subclass.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_fail.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/tests/test_item_sort_key.py -> build/bdist.linux-x86_64/egg/simplejson/tests
+copying build/lib.linux-x86_64-2.6/simplejson/encoder.py -> build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/ordered_dict.py -> build/bdist.linux-x86_64/egg/simplejson
+copying build/lib.linux-x86_64-2.6/simplejson/__init__.py -> build/bdist.linux-x86_64/egg/simplejson
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/scanner.py to scanner.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/compat.py to compat.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/decoder.py to decoder.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tool.py to tool.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_str_subclass.py to test_str_subclass.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_check_circular.py to test_check_circular.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_float.py to test_float.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_namedtuple.py to test_namedtuple.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_indent.py to test_indent.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_tool.py to test_tool.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_scanstring.py to test_scanstring.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_bitsize_int_as_string.py to test_bitsize_int_as_string.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_bigint_as_string.py to test_bigint_as_string.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_encode_basestring_ascii.py to test_encode_basestring_ascii.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_iterable.py to test_iterable.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_errors.py to test_errors.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_separators.py to test_separators.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_dump.py to test_dump.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_encode_for_html.py to test_encode_for_html.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_pass3.py to test_pass3.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_speedups.py to test_speedups.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_decimal.py to test_decimal.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_pass1.py to test_pass1.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_tuple.py to test_tuple.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_raw_json.py to test_raw_json.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_recursion.py to test_recursion.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_unicode.py to test_unicode.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_decode.py to test_decode.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_for_json.py to test_for_json.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_default.py to test_default.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_pass2.py to test_pass2.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_subclass.py to test_subclass.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_fail.py to test_fail.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/tests/test_item_sort_key.py to test_item_sort_key.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/encoder.py to encoder.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/ordered_dict.py to ordered_dict.pyc
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/__init__.py to __init__.pyc
+creating stub loader for simplejson/_speedups.so
+byte-compiling build/bdist.linux-x86_64/egg/simplejson/_speedups.py to _speedups.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying simplejson.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying simplejson.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying simplejson.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying simplejson.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+writing build/bdist.linux-x86_64/egg/EGG-INFO/native_libs.txt
+zip_safe flag not set; analyzing archive contents...
+simplejson.tests.__init__: module references __file__
+creating dist
+creating 'dist/simplejson-3.10.0-py2.6-linux-x86_64.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing simplejson-3.10.0-py2.6-linux-x86_64.egg
+creating /usr/lib64/python2.6/site-packages/simplejson-3.10.0-py2.6-linux-x86_64.egg
+Extracting simplejson-3.10.0-py2.6-linux-x86_64.egg to /usr/lib64/python2.6/site-packages
+Adding simplejson 3.10.0 to easy-install.pth file
+
+Installed /usr/lib64/python2.6/site-packages/simplejson-3.10.0-py2.6-linux-x86_64.egg
+Processing dependencies for simplejson==3.10.0
+Finished processing dependencies for simplejson==3.10.0
+[root@ip-172-31-8-130 simplejson]# cd ..
+[root@ip-172-31-8-130 extweetwordcount]# vi hello-stream-twitter.py 
+[root@ip-172-31-8-130 extweetwordcount]# python hello-stream-twitter.py 
+Gathering data at Thu Mar 16 15:51:00 2017
+Start Time = Thu Mar 16 15:51:00 2017
+/usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg/requests/packages/urllib3/util/ssl_.py:334: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning
+/usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg/requests/packages/urllib3/util/ssl_.py:132: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning
+rt @helloairin: เขาคือใครวะ ที่คนนั้นเอารูปมาเทียบบ๊อบอ่ะ
+oh hello! @innocent https://t.co/yqjltpmx0f
+hellooo... :) sarah (sarahweaver21) https://t.co/rdfauvdxap
+hello.. jackie cummings (cummingsjackie5) :) https://t.co/5myiyg8ldt
+helloo. ♛j (queeeenjoc) :) https://t.co/7yftlnonaz
+hello world! welcome friends! the kitchen is no longer just a space for preparing and cooking meals, it’s now a... https://t.co/wkoidwenjj
+hello!
+Count==  2916
+End Time = Thu Mar 16 15:52:00 2017
+Elapsed Time = 60.048582077
+[root@ip-172-31-8-130 extweetwordcount]# sparse run
+Traceback (most recent call last):
+  File "/usr/bin/sparse", line 5, in <module>
+    from pkg_resources import load_entry_point
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3070, in <module>
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3056, in _call_aside
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3083, in _initialize_master_working_set
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 647, in _build_master
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 660, in _build_from_requirements
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 833, in resolve
+pkg_resources.DistributionNotFound: The 'streamparse==2.1.4' distribution was not found and is required by the application
+[root@ip-172-31-8-130 extweetwordcount]# ls
+_build       fabfile.py               logs         psycopg-sample.py  _resources  src       topologies  Twittercredentials.py   virtualenvs
+config.json  hello-stream-twitter.py  project.clj  README.md          simplejson  tasks.py  tweepy      Twittercredentials.pyc  w205-spring-17-labs-exercises
+[root@ip-172-31-8-130 extweetwordcount]# python psycopg-sample.py 
+Could not create tcount
+Traceback (most recent call last):
+  File "psycopg-sample.py", line 33, in <module>
+    count INT     NOT NULL);''')
+psycopg2.ProgrammingError: relation "tweetwordcount" already exists
+
+[root@ip-172-31-8-130 extweetwordcount]# cd ..
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse        v2.1.4.tar.gz
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4  wordcount
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   tweetcount
+[root@ip-172-31-8-130 ~]# cd tweetcount/
+[root@ip-172-31-8-130 tweetcount]# sparse run
+Traceback (most recent call last):
+  File "/usr/bin/sparse", line 5, in <module>
+    from pkg_resources import load_entry_point
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3070, in <module>
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3056, in _call_aside
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 3083, in _initialize_master_working_set
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 647, in _build_master
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 660, in _build_from_requirements
+  File "build/bdist.linux-x86_64/egg/pkg_resources/__init__.py", line 833, in resolve
+pkg_resources.DistributionNotFound: The 'streamparse==2.1.4' distribution was not found and is required by the application
+[root@ip-172-31-8-130 tweetcount]# git clone https://github.com/Parsely/streamparse/tree/v2.1.4/streamparse
+Initialized empty Git repository in /root/tweetcount/streamparse/.git/
+error: The requested URL returned error: 403 Forbidden while accessing https://github.com/Parsely/streamparse/tree/v2.1.4/streamparse/info/refs
+
+fatal: HTTP request failed
+[root@ip-172-31-8-130 tweetcount]# https://github.com/Parsely/streamparse/tree/v2.1.4^C
+[root@ip-172-31-8-130 tweetcount]# git clone https://github.com/Parsely/streamparse/tree/v2.1.4
+Initialized empty Git repository in /root/tweetcount/v2.1.4/.git/
+error: The requested URL returned error: 403 Forbidden while accessing https://github.com/Parsely/streamparse/tree/v2.1.4/info/refs
+
+fatal: HTTP request failed
+[root@ip-172-31-8-130 tweetcount]# git clone https://github.com/Parsely/streamparse
+Initialized empty Git repository in /root/tweetcount/streamparse/.git/
+remote: Counting objects: 5816, done.
+remote: Compressing objects: 100% (4/4), done.
+Receiving objects: 100% (5816/5816), 4.85 MiB | 7.42 MiB/s, done.
+remote: Total 5816 (delta 0), reused 0 (delta 0), pack-reused 5812
+Resolving deltas: 100% (3413/3413), done.
+[root@ip-172-31-8-130 tweetcount]# cd streamparse/
+[root@ip-172-31-8-130 streamparse]# python setup.py install
+Traceback (most recent call last):
+  File "setup.py", line 46, in <module>
+    if sys.version_info.major < 3:
+AttributeError: 'tuple' object has no attribute 'major'
+[root@ip-172-31-8-130 streamparse]# cd ..
+[root@ip-172-31-8-130 tweetcount]# cd ..
+[root@ip-172-31-8-130 ~]# wget Download
+--2017-03-16 16:30:58--  http://download/
+Resolving download... failed: Name or service not known.
+wget: unable to resolve host address “download”
+[root@ip-172-31-8-130 ~]# streamparse-2.1.4.zip^C
+[root@ip-172-31-8-130 ~]# wget https://pypi.python.org/packages/61/3f/c7e5a9a011d02b7e5fc23de995d3f98fce2b033123d76b4075e4a1b49b5b/streamparse-2.1.4.zip
+--2017-03-16 16:31:29--  https://pypi.python.org/packages/61/3f/c7e5a9a011d02b7e5fc23de995d3f98fce2b033123d76b4075e4a1b49b5b/streamparse-2.1.4.zip
+Resolving pypi.python.org... 151.101.32.223, 2a04:4e42:8::223
+Connecting to pypi.python.org|151.101.32.223|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 199785 (195K) [application/octet-stream]
+Saving to: “streamparse-2.1.4.zip”
+
+100%[========================================================================================================================================>] 199,785     --.-K/s   in 0.005s  
+
+2017-03-16 16:31:29 (36.1 MB/s) - “streamparse-2.1.4.zip” saved [199785/199785]
+
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse            tweetcount
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4      v2.1.4.tar.gz
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   streamparse-2.1.4.zip  wordcount
+[root@ip-172-31-8-130 ~]# unzip streamparse-2.1.4
+Archive:  streamparse-2.1.4.zip
+replace streamparse-2.1.4/CHANGES.md? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/CHANGES.md  
+replace streamparse-2.1.4/dev-requirements.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/dev-requirements.txt  
+replace streamparse-2.1.4/DEVELOP.md? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/DEVELOP.md  
+replace streamparse-2.1.4/MANIFEST.in? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/MANIFEST.in  
+replace streamparse-2.1.4/NOTES.md? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/NOTES.md  
+  inflating: streamparse-2.1.4/PKG-INFO  
+replace streamparse-2.1.4/README.rst? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/README.rst  
+replace streamparse-2.1.4/requirements.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/requirements.txt  
+replace streamparse-2.1.4/setup.cfg? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/setup.cfg  
+replace streamparse-2.1.4/setup.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/setup.py  
+replace streamparse-2.1.4/test-requirements.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/test-requirements.txt  
+replace streamparse-2.1.4/streamparse/__init__.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/__init__.pyc  
+replace streamparse-2.1.4/streamparse/bolt.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/bolt.py  
+  inflating: streamparse-2.1.4/streamparse/bolt.pyc  
+replace streamparse-2.1.4/streamparse/component.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/component.py  
+  inflating: streamparse-2.1.4/streamparse/component.pyc  
+replace streamparse-2.1.4/streamparse/contextmanagers.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/contextmanagers.py  
+  inflating: streamparse-2.1.4/streamparse/contextmanagers.pyc  
+replace streamparse-2.1.4/streamparse/debug.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/debug.py  
+replace streamparse-2.1.4/streamparse/decorators.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/decorators.py  
+  inflating: streamparse-2.1.4/streamparse/decorators.pyc  
+replace streamparse-2.1.4/streamparse/run.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/run.py  
+replace streamparse-2.1.4/streamparse/spout.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/spout.py  
+  inflating: streamparse-2.1.4/streamparse/spout.pyc  
+  inflating: streamparse-2.1.4/streamparse/thrift.pyc  
+replace streamparse-2.1.4/streamparse/util.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/util.py  
+  inflating: streamparse-2.1.4/streamparse/util.pyc  
+replace streamparse-2.1.4/streamparse/version.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/version.py  
+  inflating: streamparse-2.1.4/streamparse/version.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/__init__.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/bolt.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/component.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/contextmanagers.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/decorators.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/spout.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/thrift.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/util.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/__pycache__/version.cpython-34.pyc  
+replace streamparse-2.1.4/streamparse/bootstrap/__init__.py? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: streamparse-2.1.4/streamparse/bootstrap/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/__init__.pyc  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/__pycache__/__init__.cpython-34.pyc  
+replace streamparse-2.1.4/streamparse/bootstrap/project/config.jinja2.json? [y]es, [n]o, [A]ll, [N]one, [r]ename: A
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/config.jinja2.json  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/fabfile.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/gitignore  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/project.jinja2.clj  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/tasks.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/src/bolts/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/src/bolts/wordcount.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/src/spouts/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/src/spouts/words.py  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/topologies/wordcount.clj  
+  inflating: streamparse-2.1.4/streamparse/bootstrap/project/virtualenvs/wordcount.txt  
+  inflating: streamparse-2.1.4/streamparse/cli/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/cli/__init__.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/attach.py  
+  inflating: streamparse-2.1.4/streamparse/cli/attach.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/common.py  
+  inflating: streamparse-2.1.4/streamparse/cli/common.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/debug.py  
+  inflating: streamparse-2.1.4/streamparse/cli/jar.py  
+  inflating: streamparse-2.1.4/streamparse/cli/jar.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/kill.py  
+  inflating: streamparse-2.1.4/streamparse/cli/kill.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/list.py  
+  inflating: streamparse-2.1.4/streamparse/cli/list.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/logs.py  
+  inflating: streamparse-2.1.4/streamparse/cli/logs.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/quickstart.py  
+  inflating: streamparse-2.1.4/streamparse/cli/quickstart.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/remove_logs.py  
+  inflating: streamparse-2.1.4/streamparse/cli/remove_logs.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/restart.py  
+  inflating: streamparse-2.1.4/streamparse/cli/restart.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/run.py  
+  inflating: streamparse-2.1.4/streamparse/cli/slot_usage.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/sparse.py  
+  inflating: streamparse-2.1.4/streamparse/cli/sparse.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/stats.py  
+  inflating: streamparse-2.1.4/streamparse/cli/stats.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/submit.py  
+  inflating: streamparse-2.1.4/streamparse/cli/submit.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/tail.py  
+  inflating: streamparse-2.1.4/streamparse/cli/tail.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/update_virtualenv.py  
+  inflating: streamparse-2.1.4/streamparse/cli/update_virtualenv.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/visualize.py  
+  inflating: streamparse-2.1.4/streamparse/cli/worker_uptime.py  
+  inflating: streamparse-2.1.4/streamparse/cli/worker_uptime.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/__init__.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/attach.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/common.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/jar.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/kill.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/list.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/logs.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/quickstart.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/remove_logs.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/restart.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/run.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/sparse.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/stats.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/submit.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/tail.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/update_virtualenv.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/visualize.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/cli/__pycache__/worker_uptime.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/dsl/__init__.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/bolt.py  
+  inflating: streamparse-2.1.4/streamparse/dsl/bolt.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/component.py  
+  inflating: streamparse-2.1.4/streamparse/dsl/component.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/spec.py  
+  inflating: streamparse-2.1.4/streamparse/dsl/spout.py  
+  inflating: streamparse-2.1.4/streamparse/dsl/spout.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/stream.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/topology.py  
+  inflating: streamparse-2.1.4/streamparse/dsl/topology.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/util.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/__init__.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/bolt.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/component.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/spout.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/stream.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/thrift.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/topology.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/dsl/__pycache__/util.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/__init__.py  
+  inflating: streamparse-2.1.4/streamparse/storm/__init__.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/bolt.py  
+  inflating: streamparse-2.1.4/streamparse/storm/bolt.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/component.py  
+  inflating: streamparse-2.1.4/streamparse/storm/component.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/spout.py  
+  inflating: streamparse-2.1.4/streamparse/storm/spout.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/__pycache__/__init__.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/__pycache__/bolt.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/__pycache__/component.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse/storm/__pycache__/spout.cpython-34.pyc  
+  inflating: streamparse-2.1.4/streamparse.egg-info/dependency_links.txt  
+  inflating: streamparse-2.1.4/streamparse.egg-info/entry_points.txt  
+  inflating: streamparse-2.1.4/streamparse.egg-info/not-zip-safe  
+  inflating: streamparse-2.1.4/streamparse.egg-info/pbr.json  
+  inflating: streamparse-2.1.4/streamparse.egg-info/PKG-INFO  
+  inflating: streamparse-2.1.4/streamparse.egg-info/requires.txt  
+  inflating: streamparse-2.1.4/streamparse.egg-info/SOURCES.txt  
+  inflating: streamparse-2.1.4/streamparse.egg-info/top_level.txt  
+  inflating: streamparse-2.1.4/test/__init__.py  
+  inflating: streamparse-2.1.4/test/ipc/__init__.py  
+  inflating: streamparse-2.1.4/test/streamparse/__init__.py  
+  inflating: streamparse-2.1.4/test/streamparse/test_bolt.py  
+  inflating: streamparse-2.1.4/test/streamparse/test_component.py  
+  inflating: streamparse-2.1.4/test/streamparse/test_dsl.py  
+  inflating: streamparse-2.1.4/test/streamparse/test_spout.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/__init__.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_attach.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_debug.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_jar.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_kill.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_list.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_logs.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_quickstart.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_remove_logs.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_run.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_sparse.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_stats.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_submit.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_tail.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_update_virtualenv.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_visualize.py  
+  inflating: streamparse-2.1.4/test/streamparse/cli/test_worker_uptime.py  
+[root@ip-172-31-8-130 ~]# python
+Python 2.6.6 (r266:84292, Jan 22 2014, 09:42:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import streamparse
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg/streamparse/__init__.py", line 9, in <module>
+    import streamparse.bolt
+  File "/usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg/streamparse/bolt.py", line 5, in <module>
+    from .storm.bolt import *
+  File "/usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg/streamparse/storm/__init__.py", line 2, in <module>
+    from .bolt import BatchingBolt, Bolt
+  File "/usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg/streamparse/storm/bolt.py", line 161
+    with self._reader_lock, self._writer_lock:
+                          ^
+SyntaxError: invalid syntax
+>>> quit()
+[root@ip-172-31-8-130 ~]# python2.7
+Python 2.7.3 (default, Feb 12 2013, 14:01:46) 
+[GCC 4.4.6 20120305 (Red Hat 4.4.6-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import streamparse
+>>> quit;
+Use quit() or Ctrl-D (i.e. EOF) to exit
+>>> quit()
+[root@ip-172-31-8-130 ~]# cd streamparse
+[root@ip-172-31-8-130 streamparse]# ls
+add-license.sh  CHANGES.md  DEVELOP.md            dist  examples  LICENSE      NOTES.md    requirements.txt  setup.py     streamparse.egg-info  test                   tox.ini
+build           conda.yaml  dev-requirements.txt  doc   jvm       MANIFEST.in  README.rst  setup.cfg         streamparse  tasks.py              test-requirements.txt
+[root@ip-172-31-8-130 streamparse]# python install setup.py
+python: can't open file 'install': [Errno 2] No such file or directory
+[root@ip-172-31-8-130 streamparse]# python setup.py install
+running install
+running bdist_egg
+running egg_info
+writing requirements to streamparse.egg-info/requires.txt
+writing streamparse.egg-info/PKG-INFO
+writing top-level names to streamparse.egg-info/top_level.txt
+writing dependency_links to streamparse.egg-info/dependency_links.txt
+writing entry points to streamparse.egg-info/entry_points.txt
+reading manifest file 'streamparse.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'streamparse.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/streamparse
+creating build/bdist.linux-x86_64/egg/streamparse/dsl
+copying build/lib/streamparse/dsl/spec.py -> build/bdist.linux-x86_64/egg/streamparse/dsl
+copying build/lib/streamparse/dsl/spout.py -> build/bdist.linux-x86_64/egg/streamparse/dsl
+copying build/lib/streamparse/dsl/bolt.py -> build/bdist.linux-x86_64/egg/streamparse/dsl
+copying build/lib/streamparse/dsl/topology.py -> build/bdist.linux-x86_64/egg/streamparse/dsl
+copying build/lib/streamparse/dsl/__init__.py -> build/bdist.linux-x86_64/egg/streamparse/dsl
+copying build/lib/streamparse/dsl/component.py -> build/bdist.linux-x86_64/egg/streamparse/dsl
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap/project
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/virtualenvs
+copying build/lib/streamparse/bootstrap/project/virtualenvs/wordcount.txt -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/virtualenvs
+copying build/lib/streamparse/bootstrap/project/tasks.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/bolts
+copying build/lib/streamparse/bootstrap/project/src/bolts/wordcount.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/bolts
+copying build/lib/streamparse/bootstrap/project/src/bolts/__init__.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/bolts
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/spouts
+copying build/lib/streamparse/bootstrap/project/src/spouts/words.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/spouts
+copying build/lib/streamparse/bootstrap/project/src/spouts/__init__.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/spouts
+copying build/lib/streamparse/bootstrap/project/gitignore -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project
+copying build/lib/streamparse/bootstrap/project/project.jinja2.clj -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project
+copying build/lib/streamparse/bootstrap/project/config.jinja2.json -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project
+creating build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/topologies
+copying build/lib/streamparse/bootstrap/project/topologies/wordcount.clj -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/topologies
+copying build/lib/streamparse/bootstrap/project/fabfile.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap/project
+copying build/lib/streamparse/bootstrap/__init__.py -> build/bdist.linux-x86_64/egg/streamparse/bootstrap
+copying build/lib/streamparse/version.py -> build/bdist.linux-x86_64/egg/streamparse
+creating build/bdist.linux-x86_64/egg/streamparse/storm
+copying build/lib/streamparse/storm/spout.py -> build/bdist.linux-x86_64/egg/streamparse/storm
+copying build/lib/streamparse/storm/bolt.py -> build/bdist.linux-x86_64/egg/streamparse/storm
+copying build/lib/streamparse/storm/__init__.py -> build/bdist.linux-x86_64/egg/streamparse/storm
+copying build/lib/streamparse/storm/component.py -> build/bdist.linux-x86_64/egg/streamparse/storm
+copying build/lib/streamparse/run.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/contextmanagers.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/cmdln.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/spout.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/bolt.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/decorators.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/debug.py -> build/bdist.linux-x86_64/egg/streamparse
+creating build/bdist.linux-x86_64/egg/streamparse/ext
+copying build/lib/streamparse/ext/util.py -> build/bdist.linux-x86_64/egg/streamparse/ext
+copying build/lib/streamparse/ext/invoke.py -> build/bdist.linux-x86_64/egg/streamparse/ext
+copying build/lib/streamparse/ext/fabric.py -> build/bdist.linux-x86_64/egg/streamparse/ext
+copying build/lib/streamparse/ext/__init__.py -> build/bdist.linux-x86_64/egg/streamparse/ext
+copying build/lib/streamparse/__init__.py -> build/bdist.linux-x86_64/egg/streamparse
+copying build/lib/streamparse/component.py -> build/bdist.linux-x86_64/egg/streamparse
+creating build/bdist.linux-x86_64/egg/test
+creating build/bdist.linux-x86_64/egg/test/streamparse
+copying build/lib/test/streamparse/test_spout.py -> build/bdist.linux-x86_64/egg/test/streamparse
+copying build/lib/test/streamparse/test_component.py -> build/bdist.linux-x86_64/egg/test/streamparse
+copying build/lib/test/streamparse/test_dsl.py -> build/bdist.linux-x86_64/egg/test/streamparse
+copying build/lib/test/streamparse/test_bolt.py -> build/bdist.linux-x86_64/egg/test/streamparse
+copying build/lib/test/streamparse/__init__.py -> build/bdist.linux-x86_64/egg/test/streamparse
+creating build/bdist.linux-x86_64/egg/test/ipc
+copying build/lib/test/ipc/__init__.py -> build/bdist.linux-x86_64/egg/test/ipc
+copying build/lib/test/__init__.py -> build/bdist.linux-x86_64/egg/test
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/dsl/spec.py to spec.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/dsl/spout.py to spout.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/dsl/bolt.py to bolt.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/dsl/topology.py to topology.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/dsl/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/dsl/component.py to component.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/tasks.py to tasks.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/bolts/wordcount.py to wordcount.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/bolts/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/spouts/words.py to words.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/src/spouts/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/project/fabfile.py to fabfile.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bootstrap/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/version.py to version.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/storm/spout.py to spout.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/storm/bolt.py to bolt.pyc
+SyntaxError: ('invalid syntax', ('build/bdist.linux-x86_64/egg/streamparse/storm/bolt.py', 161, 31, '        with self._reader_lock, self._writer_lock:\n'))
+
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/storm/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/storm/component.py to component.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/run.py to run.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/contextmanagers.py to contextmanagers.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/cmdln.py to cmdln.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/spout.py to spout.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/bolt.py to bolt.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/decorators.py to decorators.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/debug.py to debug.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/ext/util.py to util.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/ext/invoke.py to invoke.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/ext/fabric.py to fabric.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/ext/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/streamparse/component.py to component.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/streamparse/test_spout.py to test_spout.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/streamparse/test_component.py to test_component.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/streamparse/test_dsl.py to test_dsl.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/streamparse/test_bolt.py to test_bolt.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/streamparse/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/ipc/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/test/__init__.py to __init__.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/not-zip-safe -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying streamparse.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating 'dist/streamparse-1.1.0-py2.6.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing streamparse-1.1.0-py2.6.egg
+removing '/usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg' (and everything under it)
+creating /usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg
+Extracting streamparse-1.1.0-py2.6.egg to /usr/lib/python2.6/site-packages
+SyntaxError: ('invalid syntax', ('/usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg/streamparse/storm/bolt.py', 161, 31, '        with self._reader_lock, self._writer_lock:\n'))
+
+streamparse 1.1.0 is already the active version in easy-install.pth
+Installing streamparse script to /usr/bin
+Installing sparse script to /usr/bin
+
+Installed /usr/lib/python2.6/site-packages/streamparse-1.1.0-py2.6.egg
+Processing dependencies for streamparse==1.1.0
+Searching for contextlib2==0.4.0
+Best match: contextlib2 0.4.0
+Processing contextlib2-0.4.0-py2.6.egg
+contextlib2 0.4.0 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/contextlib2-0.4.0-py2.6.egg
+Searching for six==1.10.0
+Best match: six 1.10.0
+Processing six-1.10.0-py2.6.egg
+six 1.10.0 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/six-1.10.0-py2.6.egg
+Searching for prettytable==0.7.2
+Best match: prettytable 0.7.2
+Adding prettytable 0.7.2 to easy-install.pth file
+
+Using /usr/lib/python2.6/site-packages
+Searching for requests==2.13.0
+Best match: requests 2.13.0
+Processing requests-2.13.0-py2.6.egg
+requests 2.13.0 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/requests-2.13.0-py2.6.egg
+Searching for Jinja2==2.7.3
+Best match: Jinja2 2.7.3
+Adding Jinja2 2.7.3 to easy-install.pth file
+
+Using /usr/lib/python2.6/site-packages
+Searching for docopt==0.6.2
+Best match: docopt 0.6.2
+Processing docopt-0.6.2-py2.6.egg
+docopt 0.6.2 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/docopt-0.6.2-py2.6.egg
+Searching for Fabric==1.10.1
+Best match: Fabric 1.10.1
+Processing Fabric-1.10.1-py2.6.egg
+Fabric 1.10.1 is already the active version in easy-install.pth
+Installing fab script to /usr/bin
+
+Using /usr/lib/python2.6/site-packages/Fabric-1.10.1-py2.6.egg
+Searching for invoke==0.10.1
+Best match: invoke 0.10.1
+Processing invoke-0.10.1-py2.6.egg
+invoke 0.10.1 is already the active version in easy-install.pth
+Installing inv script to /usr/bin
+Installing invoke script to /usr/bin
+
+Using /usr/lib/python2.6/site-packages/invoke-0.10.1-py2.6.egg
+Searching for MarkupSafe==0.23
+Best match: MarkupSafe 0.23
+Adding MarkupSafe 0.23 to easy-install.pth file
+
+Using /usr/lib64/python2.6/site-packages
+Searching for paramiko==1.15.2
+Best match: paramiko 1.15.2
+Processing paramiko-1.15.2-py2.6.egg
+paramiko 1.15.2 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/paramiko-1.15.2-py2.6.egg
+Searching for ecdsa==0.13
+Best match: ecdsa 0.13
+Processing ecdsa-0.13-py2.6.egg
+ecdsa 0.13 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/ecdsa-0.13-py2.6.egg
+Searching for pycrypto==2.6.1
+Best match: pycrypto 2.6.1
+Processing pycrypto-2.6.1-py2.6-linux-x86_64.egg
+pycrypto 2.6.1 is already the active version in easy-install.pth
+
+Using /usr/lib/python2.6/site-packages/pycrypto-2.6.1-py2.6-linux-x86_64.egg
+Finished processing dependencies for streamparse==1.1.0
+[root@ip-172-31-8-130 streamparse]# python
+Python 2.6.6 (r266:84292, Jan 22 2014, 09:42:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import streamparse
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "streamparse/__init__.py", line 9, in <module>
+    import streamparse.bolt
+  File "streamparse/bolt.py", line 5, in <module>
+    from .storm.bolt import *
+  File "streamparse/storm/__init__.py", line 2, in <module>
+    from .bolt import BatchingBolt, Bolt
+  File "streamparse/storm/bolt.py", line 161
+    with self._reader_lock, self._writer_lock:
+                          ^
+SyntaxError: invalid syntax
+>>> quit()
+[root@ip-172-31-8-130 streamparse]# cd ..
+[root@ip-172-31-8-130 ~]# ls
+dans_bash_history.txt  ez_setup.py            rstudio-server-rhel-0.99.892-x86_64.rpm  start-hadoop.sh~  streamparse            tweetcount
+dead.letter            ipython                setuptools-25.1.3.zip                    stop-hadoop.sh    streamparse-2.1.4      v2.1.4.tar.gz
+extweetwordcount       pgxl-deployment-tools  start-hadoop.sh                          stop-hadoop.sh~   streamparse-2.1.4.zip  wordcount
+[root@ip-172-31-8-130 ~]# cd streamparse-2.1.4
+[root@ip-172-31-8-130 streamparse-2.1.4]# ls
+add-license.sh  CHANGES.md  DEVELOP.md            dist  examples  LICENSE      NOTES.md  README.rst        setup.cfg  streamparse           tasks.py  test-requirements.txt
+build           conda.yaml  dev-requirements.txt  doc   jvm       MANIFEST.in  PKG-INFO  requirements.txt  setup.py   streamparse.egg-info  test      tox.ini
+[root@ip-172-31-8-130 streamparse-2.1.4]# python setup.py install
+Traceback (most recent call last):
+  File "setup.py", line 44, in <module>
+    if sys.version_info.major < 3:
+AttributeError: 'tuple' object has no attribute 'major'
+[root@ip-172-31-8-130 streamparse-2.1.4]# 
